@@ -17,7 +17,7 @@ function getRhymes() {
     ).then((data) =>
         insertRhyme(data)
     ).catch((err) => {
-        handleRhymeError(err)
+        handleRhymeError("There was a problem! You can try again or give up.")
     }
     )
 
@@ -38,7 +38,7 @@ function insertRhyme(data) {
     } else {
         if (data) {
             rhymeToShow = data.word;
-        } else handleRhymeError("There was a problem! You can try again or give up.");
+        } else handleRhymeError("We couldn't find any rhymes!");
 
     }
     document.getElementById("rhymeLoading").innerText = "";
@@ -51,11 +51,9 @@ function insertRhyme(data) {
 
 function handleRhymeError(err) {
 
-    console.log(err);
-    let errText = "There was a problem! You can try again or give up."
     document.getElementById("rhymeLoading").innerText = "";
     document.getElementById("rhymeNode").innerText = "";
-    document.getElementById("errorText").innerText = errText;
+    document.getElementById("errorText").innerText = err;
 
 }
 

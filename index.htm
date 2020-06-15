@@ -9,6 +9,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
         integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
 
     <title>Get a Rhyme!</title>
 
@@ -19,7 +20,7 @@
 
 <body>
     <div id="request">
-        <h1>Get a Rhyme!</h1>
+        <h1 id="requestHeader">Get a Rhyme!</h1>
         <form id="rhymeInputForm" action="javascript:getRhymes()">
             <div class="form-group">
                 <label for="RhymeBrainInput">Words that Rhyme with:</label>
@@ -34,19 +35,16 @@
 
         <small id="rhymeLoading"></small>
     </div>
-
-    <footer>
-        <div id="rhymeBrainsRef">
-            <small>
-                Rhyme results are provided by <a href="https://rhymebrain.com">RhymeBrain.com</a>
-            </small>
-        </div>
-    </footer>
-
-
-
-
 </body>
+
+<footer>
+    <div id="rhymeBrainsRef">
+        <small>
+            Rhyme results are provided by <a href="https://rhymebrain.com">RhymeBrain.com</a>
+        </small>
+    </div>
+</footer>
+
 <script type="text/javascript" src="script.js"></script>
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
