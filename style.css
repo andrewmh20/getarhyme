@@ -1,0 +1,32 @@
+body {
+  padding-top: 10vh;
+  width: 80vw;
+  height: auto;
+  margin: auto;
+  background-color: #cff2ef;
+}
+
+#requestHeader {
+  text-align: center;
+  font-size: 7vw;
+}
+#request {
+  color: #1a535c;
+}
+#response {
+  color: #1a535c;
+}
+#rhymeNode {
+  font-size: 5vw;
+}
+
+#errorText {
+  color: #ff6b6b;
+}
+
+footer {
+  position: fixed;
+  left: 0vh;
+  bottom: 0vh;
+  color: #1a535c;
+}
