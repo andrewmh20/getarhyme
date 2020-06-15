@@ -1,7 +1,7 @@
 body {
   padding-top: 10vh;
   width: 80vw;
-  height: auto;
+  height: 10vh;
   margin: auto;
   background-color: #cff2ef;
 }
@@ -10,7 +10,9 @@ body {
   text-align: center;
   font-size: 7vw;
 }
-#request {
+#request,
+#response,
+footer {
   color: #1a535c;
 }
 #response {
@@ -26,7 +28,7 @@ body {
 
 footer {
   position: fixed;
-  left: 0vh;
   bottom: 0vh;
+  left: 0vw;
   color: #1a535c;
 }
