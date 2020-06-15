@@ -43,6 +43,7 @@ function insertRhyme(data) {
     }
     document.getElementById("rhymeLoading").innerText = "";
     document.getElementById("rhymeNode").innerText = rhymeToShow;
+    history.pushState({}, "");
 
 
 
