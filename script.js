@@ -11,12 +11,14 @@ function getRhymes() {
 
     const input = document.getElementById("RhymeBrainInput");
     const url = api + "&word=" + input.value;
+    // console.log(url);
 
     fetch(url).then(
         (resp) => resp.json()
     ).then((data) =>
         insertRhyme(data)
     ).catch((err) => {
+        console.log(err);
         handleRhymeError("There was a problem! You can try again or give up.")
     }
     )
@@ -25,12 +27,18 @@ function getRhymes() {
 
 function insertRhyme(data) {
     let rhymeToShow = null;
-    console.log(data)
 
+    //TODO feature: Add a slider to select the quality of rhymes returned
     if (Array.isArray(data)) {
-        if (data.length > 0) {
-            let rhymeIndex = getRndInteger(0, data.length - 1);
-            rhymeToShow = data[rhymeIndex].word;
+        dataFiltered = data.filter(
+            (elt) => elt.score >= 300
+        );
+
+        if (dataFiltered.length > 0) {
+            let rhymeIndex = getRndInteger(0, dataFiltered.length - 1);
+            rhymeToShow = dataFiltered[rhymeIndex].word;
+            // console.log(dataFiltered)[rhymeIndex];
+
         }
         else {
             handleRhymeError("We couldn't find any rhymes!")
@@ -43,7 +51,6 @@ function insertRhyme(data) {
     }
     document.getElementById("rhymeLoading").innerText = "";
     document.getElementById("rhymeNode").innerText = rhymeToShow;
-    history.pushState({}, "");
 
 
 
