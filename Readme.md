@@ -9,3 +9,5 @@ This was a very-very quick project to provide a quick way to get a random rhyme 
 ### Slider to select how much of a match your word should be
 
 ### Add a way to filter out repeated words in a certain timeframe
+
+### Add languages
