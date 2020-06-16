@@ -10,7 +10,7 @@ function getRhymes() {
 
 
     const input = document.getElementById("RhymeBrainInput");
-    const url = api + "&word=" + input.value;
+    const url = api + "&word=" + input.value.toLowerCase();
     // console.log(url);
 
     fetch(url).then(
