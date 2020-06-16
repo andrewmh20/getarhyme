@@ -50,6 +50,7 @@ function insertRhyme(data) {
 
     }
     document.getElementById("rhymeLoading").innerText = "";
+    document.getElementById("errorText").innerText = ""
     document.getElementById("rhymeNode").innerText = rhymeToShow;
 
 
